@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>雨夜、相遇</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            line-height: 1.5em;
+        }
+
+        .wonderpen-page {
+            font-size: 14px;
+            color: #212121;
+        }
+
+
+        .wonderpen-page a {
+            color: rgba(47, 117, 191, 1);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .wonderpen-page a:hover {
+            opacity: 0.618;
+        }
+
+
+
+        @font-face {
+            font-family: octicons-link;
+            src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+        }
+
+        .markdown-body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #333;
+            /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+            font-family: "Source Code Pro", "Pingfang SC", "Segoe UI", Roboto, Helvetica, Arial, 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.7;
+            word-wrap: break-word;
+        }
+
+        .markdown-body .pl-c {
+            color: #969896;
+        }
+
+        .markdown-body .pl-c1,
+        .markdown-body .pl-s .pl-v {
+            color: #0086b3;
+        }
+
+        .markdown-body .pl-e,
+        .markdown-body .pl-en {
+            color: #795da3;
+        }
+
+        .markdown-body .pl-smi,
+        .markdown-body .pl-s .pl-s1 {
+            color: #333;
+        }
+
+        .markdown-body .pl-ent {
+            color: #63a35c;
+        }
+
+        .markdown-body .pl-k {
+            color: #a71d5d;
+        }
+
+        .markdown-body .pl-s,
+        .markdown-body .pl-pds,
+        .markdown-body .pl-s .pl-pse .pl-s1,
+        .markdown-body .pl-sr,
+        .markdown-body .pl-sr .pl-cce,
+        .markdown-body .pl-sr .pl-sre,
+        .markdown-body .pl-sr .pl-sra {
+            color: #183691;
+        }
+
+        .markdown-body .pl-v {
+            color: #ed6a43;
+        }
+
+        .markdown-body .pl-id {
+            color: #b52a1d;
+        }
+
+        .markdown-body .pl-ii {
+            color: #f8f8f8;
+            background-color: #b52a1d;
+        }
+
+        .markdown-body .pl-sr .pl-cce {
+            font-weight: bold;
+            color: #63a35c;
+        }
+
+        .markdown-body .pl-ml {
+            color: #693a17;
+        }
+
+        .markdown-body .pl-mh,
+        .markdown-body .pl-mh .pl-en,
+        .markdown-body .pl-ms {
+            font-weight: bold;
+            color: #1d3e81;
+        }
+
+        .markdown-body .pl-mq {
+            color: #008080;
+        }
+
+        .markdown-body .pl-mi {
+            font-style: italic;
+            color: #333;
+        }
+
+        .markdown-body .pl-mb {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .markdown-body .pl-md {
+            color: #bd2c00;
+            background-color: #ffecec;
+        }
+
+        .markdown-body .pl-mi1 {
+            color: #55a532;
+            background-color: #eaffea;
+        }
+
+        .markdown-body .pl-mdr {
+            font-weight: bold;
+            color: #795da3;
+        }
+
+        .markdown-body .pl-mo {
+            color: #1d3e81;
+        }
+
+        .markdown-body .octicon {
+            display: inline-block;
+            vertical-align: text-top;
+            fill: currentColor;
+        }
+
+        .markdown-body a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+
+        .markdown-body a:active,
+        .markdown-body a:hover {
+            outline-width: 0;
+        }
+
+        .markdown-body strong {
+            font-weight: inherit;
+        }
+
+        .markdown-body strong {
+            font-weight: bolder;
+        }
+
+        .markdown-body h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        .markdown-body img {
+            border-style: none;
+        }
+
+        .markdown-body svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .markdown-body code,
+        .markdown-body kbd,
+        .markdown-body pre {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+
+        .markdown-body hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+
+        .markdown-body input {
+            font: inherit;
+            margin: 0;
+        }
+
+        .markdown-body input {
+            overflow: visible;
+        }
+
+        .markdown-body button:-moz-focusring,
+        .markdown-body [type="button"]:-moz-focusring,
+        .markdown-body [type="reset"]:-moz-focusring,
+        .markdown-body [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        .markdown-body [type="checkbox"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .markdown-body * {
+            box-sizing: border-box;
+        }
+
+        .markdown-body input {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .markdown-body a {
+            color: #4078c0;
+            text-decoration: none;
+        }
+
+        .markdown-body a:hover,
+        .markdown-body a:active {
+            text-decoration: underline;
+        }
+
+        .markdown-body strong {
+            font-weight: 600;
+        }
+
+        .markdown-body hr {
+            height: 0;
+            margin: 15px 0;
+            overflow: hidden;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .markdown-body hr::before {
+            display: table;
+            content: "";
+        }
+
+        .markdown-body hr::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .markdown-body table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .markdown-body td,
+        .markdown-body th {
+            padding: 0;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body h1 {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .markdown-body h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .markdown-body h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .markdown-body h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .markdown-body h5 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .markdown-body h6 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /*.markdown-body p {*/
+        /*margin-top: 0;*/
+        /*margin-bottom: 10px;*/
+        /*}*/
+
+        .markdown-body blockquote {
+            margin: 0;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body ol ol,
+        .markdown-body ul ol {
+            list-style-type: lower-roman;
+        }
+
+        .markdown-body ul ul ol,
+        .markdown-body ul ol ol,
+        .markdown-body ol ul ol,
+        .markdown-body ol ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        .markdown-body dd {
+            margin-left: 0;
+        }
+
+        .markdown-body code {
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 12px;
+        }
+
+        .markdown-body pre {
+            margin-top: 0;
+            margin-bottom: 0;
+            font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        .markdown-body .octicon {
+            vertical-align: text-bottom;
+        }
+
+        .markdown-body input {
+            -webkit-font-feature-settings: "liga" 0;
+            font-feature-settings: "liga" 0;
+        }
+
+        .markdown-body .form-select::-ms-expand {
+            opacity: 0;
+        }
+
+        .markdown-body::before {
+            display: table;
+            content: "";
+        }
+
+        .markdown-body::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .markdown-body>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        .markdown-body>*:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .markdown-body a:not([href]) {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .markdown-body .anchor {
+            float: left;
+            padding-right: 4px;
+            margin-left: -20px;
+            line-height: 1;
+        }
+
+        .markdown-body .anchor:focus {
+            outline: none;
+        }
+
+        .markdown-body p {
+            margin: 0;
+        }
+
+        .markdown-body p:empty::before {
+            content: "\00A0";
+        }
+
+        .markdown-body blockquote,
+        .markdown-body ul,
+        .markdown-body ol,
+        .markdown-body dl,
+        .markdown-body table,
+        .markdown-body pre {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        .markdown-body hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 0;
+        }
+
+        .markdown-body blockquote {
+            padding: 16px;
+            border-left: 0.25em solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .markdown-body blockquote> :first-child {
+            margin-top: 0;
+        }
+
+        .markdown-body blockquote> :last-child {
+            margin-bottom: 0;
+        }
+
+        .markdown-body kbd {
+            display: inline-block;
+            padding: 3px 5px;
+            font-size: 11px;
+            line-height: 10px;
+            color: #555;
+            vertical-align: middle;
+            background-color: #fcfcfc;
+            border: solid 1px #ccc;
+            border-bottom-color: #bbb;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #bbb;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown-body h1 .octicon-link,
+        .markdown-body h2 .octicon-link,
+        .markdown-body h3 .octicon-link,
+        .markdown-body h4 .octicon-link,
+        .markdown-body h5 .octicon-link,
+        .markdown-body h6 .octicon-link {
+            color: #000;
+            vertical-align: middle;
+            visibility: hidden;
+        }
+
+        .markdown-body h1:hover .anchor,
+        .markdown-body h2:hover .anchor,
+        .markdown-body h3:hover .anchor,
+        .markdown-body h4:hover .anchor,
+        .markdown-body h5:hover .anchor,
+        .markdown-body h6:hover .anchor {
+            text-decoration: none;
+        }
+
+        .markdown-body h1:hover .anchor .octicon-link,
+        .markdown-body h2:hover .anchor .octicon-link,
+        .markdown-body h3:hover .anchor .octicon-link,
+        .markdown-body h4:hover .anchor .octicon-link,
+        .markdown-body h5:hover .anchor .octicon-link,
+        .markdown-body h6:hover .anchor .octicon-link {
+            visibility: visible;
+        }
+
+        .markdown-body h1 {
+            padding-bottom: 0.3em;
+            font-size: 2em;
+            /*border-bottom: 1px solid #eee;*/
+            /*page-break-before: right;*/
+        }
+
+        .markdown-body h2 {
+            padding-bottom: 0.3em;
+            font-size: 1.5em;
+            /*border-bottom: 1px solid #eee;*/
+            /*page-break-before: always;*/
+        }
+
+        .markdown-body h3 {
+            font-size: 1.25em;
+            /*page-break-before: always;*/
+        }
+
+        .markdown-body h4 {
+            font-size: 1em;
+        }
+
+        .markdown-body h5 {
+            font-size: 0.875em;
+        }
+
+        .markdown-body h6 {
+            font-size: 0.85em;
+            color: #777;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            padding-left: 2em;
+        }
+
+        .markdown-body ul ul,
+        .markdown-body ul ol,
+        .markdown-body ol ol,
+        .markdown-body ol ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body dl {
+            padding: 0;
+        }
+
+        .markdown-body dl dt {
+            padding: 0;
+            margin-top: 16px;
+            font-size: 1em;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .markdown-body dl dd {
+            padding: 0 16px;
+            margin-bottom: 16px;
+        }
+
+        .markdown-body table {
+            display: block;
+            width: 100%;
+            overflow: auto;
+            /*word-break: normal;*/
+            word-break: keep-all;
+        }
+
+        .markdown-body table th {
+            font-weight: bold;
+        }
+
+        .markdown-body table th,
+        .markdown-body table td {
+            padding: 6px 13px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .markdown-body table tr {
+            /* background-color: #fff;*/
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .markdown-body table tr:nth-child(2n) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: #fff;
+        }
+
+        .markdown-body code {
+            padding: 0;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(0, 0, 0, 0.04);
+            border-radius: 3px;
+        }
+
+        .markdown-body code::before,
+        .markdown-body code::after {
+            letter-spacing: -0.2em;
+            content: "\00a0";
+        }
+
+        .markdown-body pre {
+            word-wrap: normal;
+        }
+
+        .markdown-body pre>code {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            word-break: normal;
+            white-space: pre-wrap;
+            background: transparent;
+            border: 0;
+        }
+
+        .markdown-body .highlight {
+            margin-bottom: 16px;
+        }
+
+        .markdown-body .highlight pre {
+            margin-bottom: 0;
+            word-break: normal;
+        }
+
+        .markdown-body .highlight pre,
+        .markdown-body pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 3px;
+        }
+
+        .markdown-body pre code {
+            display: inline;
+            /*max-width: auto;*/
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            line-height: inherit;
+            word-wrap: normal;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .markdown-body pre code::before,
+        .markdown-body pre code::after {
+            content: normal;
+        }
+
+        .markdown-body .pl-0 {
+            padding-left: 0 !important;
+        }
+
+        .markdown-body .pl-1 {
+            padding-left: 3px !important;
+        }
+
+        .markdown-body .pl-2 {
+            padding-left: 6px !important;
+        }
+
+        .markdown-body .pl-3 {
+            padding-left: 12px !important;
+        }
+
+        .markdown-body .pl-4 {
+            padding-left: 24px !important;
+        }
+
+        .markdown-body .pl-5 {
+            padding-left: 36px !important;
+        }
+
+        .markdown-body .pl-6 {
+            padding-left: 48px !important;
+        }
+
+        .markdown-body .full-commit .btn-outline:not(:disabled):hover {
+            color: #4078c0;
+            border: 1px solid #4078c0;
+        }
+
+        .markdown-body kbd {
+            display: inline-block;
+            padding: 3px 5px;
+            font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            line-height: 10px;
+            color: #555;
+            vertical-align: middle;
+            background-color: #fcfcfc;
+            border: solid 1px #ccc;
+            border-bottom-color: #bbb;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #bbb;
+        }
+
+        .markdown-body :checked+.radio-label {
+            position: relative;
+            z-index: 1;
+            border-color: #4078c0;
+        }
+
+        .markdown-body .task-list-item {
+            list-style-type: none;
+        }
+
+        .markdown-body .task-list-item+.task-list-item {
+            margin-top: 3px;
+        }
+
+        .markdown-body .task-list-item input {
+            margin: 0 0.2em 0.25em -1.6em;
+            vertical-align: middle;
+        }
+
+        .markdown-body figure {
+            margin: 1.2em 0;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #d73a49;
+        }
+
+        .hljs-string,
+        .hljs-regexp {
+            color: #032f62;
+        }
+
+        .hljs-comment,
+        .hljs-doctag {
+            color: #6a737d;
+            font-style: italic;
+        }
+
+        .hljs-title.hljs-function {
+            color: #6f42c1;
+        }
+
+        .hljs-title.hljs-class,
+        .hljs-title {
+            color: #6f42c1;
+        }
+
+        .hljs-number {
+            color: #005cc5;
+        }
+
+        .hljs-type,
+        .hljs-built_in {
+            color: #e36209;
+        }
+
+        .hljs-literal {
+            color: #005cc5;
+        }
+
+        .hljs-attr,
+        .hljs-attribute {
+            color: #005cc5;
+        }
+
+        .hljs-selector-class,
+        .hljs-selector-id {
+            color: #22863a;
+        }
+
+        .hljs-addition {
+            color: #22863a;
+            background-color: #22863a1a;
+        }
+
+        .hljs-deletion {
+            color: #b31d28;
+            background-color: #b31d281a;
+        }
+
+        .hljs-variable,
+        .hljs-template-variable {
+            color: #e36209;
+        }
+
+        .hljs-meta {
+            color: #6a737d;
+        }
+
+        .hljs-tag {
+            color: #586069;
+        }
+
+        .hljs-name {
+            color: #22863a;
+        }
+
+        .hljs-symbol,
+        .hljs-bullet {
+            color: #e36209;
+        }
+
+        .hljs-section {
+            font-weight: bold;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .wonderpen-toc {
+            width: 240px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: rgb(219, 228, 236);
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+        }
+
+        .wonderpen-toc-body {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .wonderpen-toc ul {
+            margin: 30px 20px;
+            padding: 0;
+        }
+
+        .wonderpen-toc li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 1.2em;
+        }
+
+        .wonderpen-toc li {
+            margin-bottom: 0.8em;
+        }
+
+        .wonderpen-toc .toc-selected a {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .wonderpen-content {
+            margin-left: var(--wp-toc-width, 240px);
+        }
+
+        .wonderpen-toc-toggler {
+            position: absolute;
+            z-index: 1;
+            top: 30px;
+            right: 20px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #999;
+            background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDk2IDk2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGc+PHBhdGggZD0iTTE4LDI0SDc4YTYsNiwwLDAsMCwwLTEySDE4YTYsNiwwLDAsMCwwLDEyWiIvPjxwYXRoIGQ9Ik03OCw0MkgxOGE2LDYsMCwwLDAsMCwxMkg3OGE2LDYsMCwwLDAsMC0xMloiLz48cGF0aCBkPSJNNzgsNzJIMThhNiw2LDAsMCwwLDAsMTJINzhhNiw2LDAsMCwwLDAtMTJaIi8+PC9nPjwvc3ZnPg==) no-repeat 50% 50%;
+            background-size: 18px 18px;
+            color: #000;
+            opacity: 0.3;
+            transition: 0.3s;
+        }
+
+        .wonderpen-toc-toggler:hover {
+            opacity: 0.9;
+        }
+
+        .wonderpen-toc-hidden .wonderpen-toc {
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .wonderpen-toc-hidden .wonderpen-content {
+            margin-left: 0;
+        }
+
+        .wonderpen-toc-hidden .wonderpen-toc-toggler {
+            right: -34px;
+        }
+
+        .wonderpen-toc .resize-handle {
+            width: 3px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -2px;
+            cursor: col-resize;
+        }
+
+        .wonderpen-toc .resize-handle:hover {
+            background: rgba(128, 128, 128, 0.5);
+        }
+
+        .wonderpen-toc .toc-level-1 {
+            padding-left: 1em;
+        }
+
+        .wonderpen-toc .toc-level-2 {
+            padding-left: 2em;
+        }
+
+        .wonderpen-toc .toc-level-3 {
+            padding-left: 3em;
+        }
+
+        .wonderpen-toc .toc-level-4 {
+            padding-left: 4em;
+        }
+
+        .wonderpen-toc .toc-level-5 {
+            padding-left: 5em;
+        }
+
+        .wonderpen-toc .toc-level-6 {
+            padding-left: 6em;
+        }
+
+        .wonderpen-toc .toc-level-7 {
+            padding-left: 7em;
+        }
+
+        .wonderpen-toc .toc-level-8 {
+            padding-left: 8em;
+        }
+
+        .wonderpen-toc .toc-level-9 {
+            padding-left: 9em;
+        }
+
+        .wonderpen-toc .toc-level-10 {
+            padding-left: 10em;
+        }
+
+        .wonderpen-pagination {
+            margin: 40px 0;
+            font-size: 12px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .wonderpen-previous-page,
+        .wonderpen-next-page {
+            max-width: 50%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+
+        .wonderpen-pagination span {
+            flex-shrink: 0;
+            color: #999;
+            padding-right: 1em;
+        }
+
+
+        .wonderpen-content {
+            padding: 30px 40px;
+        }
+
+        .markdown-body {
+            font-family: 文泉驿等宽微米黑, "Maple Mono NF CN";
+            font-size: 16px;
+            color: auto;
+            line-height: 1.7em;
+            text-align: left;
+        }
+    </style>
+    <style data-role="custom-css"></style>
+</head>
+
+<body class="">
+    <div class="wonderpen-page has-toc">
+        <div class="wonderpen-toc"><button class="wonderpen-toc-toggler" id="wp-toc-toggler"></button>
+            <div class="resize-handle"></div>
+            <div class="wonderpen-toc-body">
+                <ul>
+                    <li>
+                        <div class="toc-title toc-level-0"><a href="..&#92;index.html">ほどけぬ明日に手を伸ばして</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1 toc-selected"><a href="雨夜、相遇.html">雨夜、相遇</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="雨夜、第二次相遇.html">雨夜、第二次相遇</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="名字是yuki.html">名字是yuki</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            ! function() {
+                var e = document.getElementById("wp-toc-toggler");
+
+                function t() {
+                    return document.querySelector(".wonderpen-content")
+                }
+                var n = document.querySelector(".wonderpen-toc"),
+                    o = n ? n.querySelector(".resize-handle") : null,
+                    c = "wonderpen_toc_width_px",
+                    r = "wonderpen_toc_scrollTop";
+
+                function d() {
+                    return n && n.querySelector(".wonderpen-toc-body") || n
+                }
+
+                function s(e) {
+                    if (n) {
+                        e = Math.max(160, Math.min(800, e)), n.style.width = e + "px";
+                        try {
+                            document.documentElement.style.setProperty("--wp-toc-width", e + "px")
+                        } catch (e) {}
+                        var o = t();
+                        return o && !document.body.classList.contains("wonderpen-toc-hidden") && (o.style.marginLeft = e + "px"), e
+                    }
+                }
+                window.addEventListener("beforeunload", function() {
+                    var e = d();
+                    if (e) try {
+                        localStorage.setItem(r, String(e.scrollTop))
+                    } catch (e) {}
+                }), e && (e.onclick = function() {
+                    var e = document.body.classList.toggle("wonderpen-toc-hidden"),
+                        o = t();
+                    if (o)
+                        if (e) {
+                            o.style.marginLeft = "0px";
+                            try {
+                                document.documentElement.style.setProperty("--wp-toc-width", "0px")
+                            } catch (e) {}
+                        } else {
+                            var c = n ? n.offsetWidth : 0;
+                            if (c) {
+                                o.style.marginLeft = c + "px";
+                                try {
+                                    document.documentElement.style.setProperty("--wp-toc-width", c + "px")
+                                } catch (e) {}
+                            }
+                        }
+                });
+                try {
+                    var a = localStorage.getItem(c);
+                    if (a) {
+                        var i = parseInt(a, 10);
+                        isNaN(i) || s(i)
+                    }
+                } catch (e) {}
+                window.addEventListener("load", function() {
+                    try {
+                        var e = localStorage.getItem(c);
+                        if (e) {
+                            var t = parseInt(e, 10);
+                            isNaN(t) || s(t)
+                        } else if (n && !document.body.classList.contains("wonderpen-toc-hidden")) {
+                            var o = n.offsetWidth;
+                            o && s(o)
+                        }
+                    } catch (e) {}
+                });
+                try {
+                    ! function() {
+                        var e = d();
+                        if (e) try {
+                            var t = localStorage.getItem(r);
+                            if (null != t) {
+                                var n = parseInt(t, 10);
+                                isNaN(n) || (e.scrollTop = n), localStorage.removeItem(r)
+                            }
+                        } catch (e) {}
+                    }()
+                } catch (e) {}
+                if (o && n) {
+                    var u = !1;
+                    o.addEventListener("mousedown", v), o.addEventListener("touchstart", v, {
+                        passive: !1
+                    })
+                }
+
+                function l(e) {
+                    if (u) {
+                        e.preventDefault();
+                        var t = n.getBoundingClientRect(),
+                            o = function(e) {
+                                return e.touches && e.touches[0] ? e.touches[0].clientX : e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : e.clientX
+                            }(e);
+                        s(o - t.left)
+                    }
+                }
+
+                function m() {
+                    if (u) {
+                        u = !1, document.removeEventListener("mousemove", l), document.removeEventListener("mouseup", m), document.removeEventListener("touchmove", l, {
+                            passive: !1
+                        }), document.removeEventListener("touchend", m);
+                        try {
+                            var e = n.offsetWidth;
+                            localStorage.setItem(c, String(e))
+                        } catch (e) {}
+                        document.body.style.userSelect = "", document.body.style.cursor = ""
+                    }
+                }
+
+                function v(e) {
+                    n && (e.preventDefault(), u = !0, document.addEventListener("mousemove", l), document.addEventListener("mouseup", m), document.addEventListener("touchmove", l, {
+                        passive: !1
+                    }), document.addEventListener("touchend", m), document.body.style.userSelect = "none", document.body.style.cursor = "ew-resize")
+                }
+            }()
+        </script>
+        <div id="wonderpen-content" class="wonderpen-content">
+            <div class="markdown-body">
+                <p>天空下着雨，就像沙漏漏下沙子一样，粉色短发的身影站在图书馆的门口，有些困扰地看着分辨不出层次的天空，她太矮，看不到雨幕的尽头，</p>
+                <p></p>
+                <p>雨还没停，图书馆晚上九点关门。</p>
+                <p></p>
+                <p>（要再进去吗？）</p>
+                <p></p>
+                <p>也没有别的选择，再出来时，已经是闭馆时间，嗯，雨确实还没停。</p>
+                <p></p>
+                <p>（难道今晚得在这里过夜吗？）</p>
+                <p></p>
+                <p>瑞希只好选了个干燥的，不起眼的角落，蜷缩在那里，</p>
+                <p></p>
+                <p>人在这种时候真的意外地有韧性...</p>
+                <p></p>
+                <p>她只是在脑海里想着今天在馆内看的那些东西，</p>
+                <p></p>
+                <p>"小弟弟..."</p>
+                <p></p>
+                <p>而完全没有到有人正向她靠近。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>瑞希在公交上小睡了会，但公交的空气悬挂太晃了，不舒服，她还抱着有点沉的书包，里边装着她看过的书，书是属于能砸伤人的大部头，</p>
+                <p></p>
+                <p>她睁开眼，有些疲倦地打了个呵欠，</p>
+                <p></p>
+                <p>（昨晚没睡好...）</p>
+                <p></p>
+                <p>今天又是翘课的一天，</p>
+                <p></p>
+                <p>学校的课对她来说只是个必须经过的节点，而今天她其实是去还书的。</p>
+                <p></p>
+                <p>图书馆对瑞希来说其实是个trigger point，</p>
+                <p></p>
+                <p>阴沉的天空，像被仔细涂抹过的、灰白色的云底，不过有些微透亮的间隙，这是冷锋过境后的云，</p>
+                <p></p>
+                <p>风吹过，她拉了拉衣领，</p>
+                <p></p>
+                <p>走了进去，</p>
+                <p></p>
+                <p>今天的前台是个年轻的，戴着眼镜的大姐姐，瑞希的目光有些回避，就像是想起了什么一样，只是沉默地从包里掏出那本和她纤细的手有些不相称的厚重的书，</p>
+                <p></p>
+                <p>对方看起来对这本黑色的书有些疑惑，</p>
+                <p></p>
+                <p>瑞希把这本黑色的书推到管理员的面前，</p>
+                <p></p>
+                <p>"我是来还书的。"</p>
+                <p></p>
+                <p>不过那个管理员也没有多说什么，接过书，又对着电脑操作了下，就拿起它向着里边的书架走去了，</p>
+                <p></p>
+                <p>（按理来说应该先放在这里再统一放回去的，是因为现在人少吗？）</p>
+                <p></p>
+                <p>瑞希感到奇怪，看着图书管理员远去的背影，她还想起了别的事情，</p>
+                <p></p>
+                <p>（每个人都有秘密，低收入，药物...）</p>
+                <p></p>
+                <p>不知道为何，瑞希觉得，再呆在这里，自己会被这种情绪吞噬，就像回到了那个夜晚。</p>
+                <p></p>
+                <p>她离开了这里。</p>
+                <p></p>
+                <p>回去的公交车上，非上下班高峰的缘故，人很少，坐在靠窗的位置看着窗外的景色流动，人群，车流...</p>
+                <p></p>
+                <p>"欸~"</p>
+                <p></p>
+                <p>（那个女孩...）</p>
+                <p></p>
+                <p>就像是深秋里的一抹亮色，对此时的瑞希而言...</p>
+                <p></p>
+                <p>（那个女孩旁边的黄毛是谁，是她的男朋友吗，看起来在吵架的样子...）</p>
+                <p></p>
+                <p>（很在意，不过尽管看起来在吵架，也像是那种笨蛋情侣。）</p>
+                <p></p>
+                <p>只是随着车子的不断移动，那两人，过了几秒，就消失在瑞希的视野里。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>回到屋子里，窗帘还拉着，床上的布偶，房间一角的球，书桌上的笔记本电脑，瑞希坐回书桌前，打开电脑合上的盖子，幽蓝的屏幕光映照在她不知什么时候戴上去的平光眼镜上，</p>
+                <p></p>
+                <p>匿名的药物讨论群组，</p>
+                <p></p>
+                <p>那个人留给瑞希的知识遗产（knowledge legacy）之一，</p>
+                <p></p>
+                <p>"あすかこない"</p>
+                <p></p>
+                <p>"结果还是得靠海外途径..."</p>
+                <p></p>
+                <p>瑞希习惯了喃喃自语，就像她习惯独处一样，</p>
+                <p></p>
+                <p>她下单了某样药物，手机上弹出了加密货币扣费的信息，</p>
+                <p></p>
+                <p>电脑上的聊天框里，交易方的名字是，シロ。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>到了下午，放晴了，天空很蓝，没有一丝云的痕迹，这符合冷锋的性质，快速（rapidly），瑞希想起昨晚的雨，她缩在被窝里，倒不是讨厌雨，她的所有记忆，都和雨（water）有关，从那场大火里，被消防队伴着巨大水压的喷水枪喷溅到，再到...</p>
+                <p></p>
+                <p>她停下了回忆，走出了房间，</p>
+                <p></p>
+                <p>还有事情，还得去学校，要维持最低程度的出勤率，</p>
+                <p></p>
+                <p>下楼了，干爽的空气，有点冷，不过没事，她现在不怎么怕冷，依旧是公交，依旧是靠窗的位置，</p>
+                <p></p>
+                <p>学校是在市区，说实话，学校对她来说是另一个trigger point，倒不是讨厌学校，只不过是因为，在那里发生的事情，和她需要处理的事情之间，没有任何交集。</p>
+                <p></p>
+                <p>这次书包里准备的是别的书，不是课本，课本被她丢在学校里了，</p>
+                <p></p>
+                <p>其实还是能感受到的，有人会议论她，议论她的特立独行，议论她奇怪的长发，奇怪的装束，</p>
+                <p></p>
+                <p>有时候瑞希也会在内心质疑自己真的有必要再上学吗，但一想到学校是连接在她与"正常世界"间那唯一的细线（hang by a thread），就放弃了这种念头，也放下了对那些目光的在意。</p>
+                <p></p>
+                <p>她真的很忙。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>进入教室，依旧存在着若有若无的注视，也是，这是猎奇景观的一部分，被议论也是当然的，瑞希坐到自己的位置上，书包里除了书之外还有一个塑料药盒，分装着她要吃的药物，像鸡尾酒一样，五颜六色的药物，她需要的可不止一样...</p>
+                <p></p>
+                <p>取出书还有药盒之后，里边还有个箱子，那里边是什么，瑞希不希望那里边的东西有机会被用到，她看了一眼，拉上了书包的拉链。</p>
+                <p></p>
+                <p>有头发垂了下来，垂到书桌和书上，洁白的手撑着瑞希的桌子，瑞希向上看去，是她在班级里可以说是唯一能说得上话的人，</p>
+                <p></p>
+                <p>"..."，瑞希其实不想她靠近，不是说讨厌她，而是这会使她顶着不合群的压力。</p>
+                <p></p>
+                <p>她很漂亮...</p>
+                <p></p>
+                <p>对方好像看到了瑞希的药和书了，药有好几样，书也很奇怪，封面是一个痛苦表情的剪影，</p>
+                <p></p>
+                <p>《The Haunted Self: Structural Dissociation and the Treatment of Chronic Traumatization》</p>
+                <p></p>
+                <p>"白石さん，座席戻って，もうすぐ授業を..."</p>
+                <p></p>
+                <p>确实，话还没说完，老师就走了进来，</p>
+                <p></p>
+                <p>"嗯~"，对方沉默地返回了自己的座位，这是瑞希想要的。</p>
+                <p></p>
+                <p>（对不起...)</p>
+                <p></p>
+                <p>上课的时候她大部分时间要么看着自己的书要么看着窗外，或者把书作为掩饰刷着手机，</p>
+                <p></p>
+                <p>（通り魔）</p>
+                <p></p>
+                <p>（什么意思，这社会可真是疯狂...）</p>
+                <p></p>
+                <p>"暁山！"</p>
+                <p></p>
+                <p>啊~被老师叫了吗？</p>
+                <p></p>
+                <p>瑞希回过头，看了老师一眼，看样子是新来的，</p>
+                <p></p>
+                <p>（是要提问我吗？）</p>
+                <p></p>
+                <p>老师突然不说话了，然而瑞希其实什么也没说。</p>
+                <p></p>
+                <p>空气凝固了几秒，对方继续上课了，瑞希也继续看自己的书了。</p>
+                <p></p>
+                <p>确实有那个女孩担忧的目光，若有若无的，</p>
+                <p></p>
+                <p>（"我被讨厌，被误解也没关系")</p>
+                <p></p>
+                <p>而且，瑞希担心的不是自己伤害了她，自然会有别人替自己安抚她的情绪，</p>
+                <p></p>
+                <p>而是她刚刚在手机上看到的针对女性的仇恨犯罪。</p>
+                <p></p>
+                <p>就发生在这附近。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>天台确实是个好地方，不是指适合做一些奇怪的事情，只是，看着天空，能让自己平静下来，旁边是水杯，瑞希从口袋里掏出药盒，</p>
+                <p></p>
+                <p>药物鸡尾酒，字面意义上的，好几种药物搭配在一起，有时候瑞希会漏服，有时候则干脆好几天都没吃，这不是什么药物假期，纯粹是供应不稳定导致的，</p>
+                <p></p>
+                <p>书包她随身带着，有被翻书包的经历，她不想冒险，</p>
+                <p></p>
+                <p>门开的声音...</p>
+                <p></p>
+                <p>瑞希刚吃完药物。</p>
+                <p></p>
+                <p>"你今天居然会来。"</p>
+                <p></p>
+                <p>"你不也是，类。"</p>
+                <p></p>
+                <p>"毕竟我可是好学生，瑞希。"</p>
+                <p></p>
+                <p>"少装了，虽说自己不知道你在做什么，但每次我想去你班里找人的时候你可都不在。"</p>
+                <p></p>
+                <p>"啊~听说了，有个可爱的学妹找我的事情！"</p>
+                <p></p>
+                <p>"..."</p>
+                <p></p>
+                <p>这个轻浮的，带着奇怪挑染的男人在旁边坐了下来。</p>
+                <p></p>
+                <p>类看着瑞希手里的药盒，眼光有些黯淡，</p>
+                <p></p>
+                <p>"你吃的药物，好像越来越多了..."</p>
+                <p></p>
+                <p>瑞希没有避讳，"精神类药物好像没有越吃越少的道理，毕竟这个社会已经病入膏肓。"</p>
+                <p></p>
+                <p>"喂喂~"，类倒是笑了出来，"能这么说我倒是放心了。"</p>
+                <p></p>
+                <p>接着，他起了身，</p>
+                <p></p>
+                <p>"要走了？"，瑞希抬头看了类一眼。</p>
+                <p></p>
+                <p>"嗯~只是听说可爱的学妹回来上课了。"，类朝着门走去，</p>
+                <p></p>
+                <p>"话说，文化节，你来不来？偶尔放松一下不也挺好？"</p>
+                <p></p>
+                <p>"看情况吧，我闲得没事干的话可能会考虑。"，瑞希没回头看类，直到类关门离开都没有回头看他。</p>
+                <p></p>
+                <p>现在，天黑得很快，Golden Time快结束了，瑞希也起身想要离开，但习惯性地向校门看去时，</p>
+                <p></p>
+                <p>"诶，那个女孩..."，瑞希可没有鹰眼，但她记住了。</p>
+                <p></p>
+                <p>这个学校，夜间有教学活动吗？</p>
+                <p></p>
+                <p>瑞希像是发现了一个巨大盲点一样，僵在了原地。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>结果还是跟着那个人回去了，</p>
+                <p></p>
+                <p>奇怪的人，戴着眼镜，声音很奇怪，像个男生又像个女生，</p>
+                <p></p>
+                <p>瑞希对这种感觉既熟悉又陌生，</p>
+                <p></p>
+                <p>雨好像变小了，</p>
+                <p></p>
+                <p>泼在身上的水花变小了，</p>
+                <p></p>
+                <p>窗外的雨声变小了，</p>
+                <p></p>
+                <p>瑞希想起了很多事情，</p>
+                <p></p>
+                <p>她合上电脑，走出了房间。</p>
+            </div>
+            <div class="wonderpen-pagination">
+                <div class="wonderpen-previous-page"><span>上一页</span> <a href="..&#92;index.html">ほどけぬ明日に手を伸ばして</a></div>
+                <div class="wonderpen-next-page"><span>下一页</span> <a href="雨夜、第二次相遇.html">雨夜、第二次相遇</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
