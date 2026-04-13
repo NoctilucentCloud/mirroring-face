@@ -3,8 +3,6 @@
 
 https://noctilucentcloud.github.io/mirroring-face/index.html
 
-This work is licensed under CC BY-NC-SA 4.0.
-
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
 This work is licensed under a
@@ -23,6 +21,3 @@ You are free to share and adapt the material under the terms of:
 - Attribution
 - NonCommercial
 - ShareAlike
-
-Full license:
-https://creativecommons.org/licenses/by-nc-sa/4.0/
