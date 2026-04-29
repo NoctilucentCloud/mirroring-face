@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>第四类接触</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            line-height: 1.5em;
+        }
+
+        .wonderpen-page {
+            font-size: 14px;
+            color: #212121;
+        }
+
+
+        .wonderpen-page a {
+            color: rgba(47, 117, 191, 1);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .wonderpen-page a:hover {
+            opacity: 0.618;
+        }
+
+
+
+        @font-face {
+            font-family: octicons-link;
+            src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+        }
+
+        .markdown-body {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+            color: #333;
+            /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+            font-family: "Source Code Pro", "Pingfang SC", "Segoe UI", Roboto, Helvetica, Arial, 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-size: 16px;
+            line-height: 1.7;
+            word-wrap: break-word;
+        }
+
+        .markdown-body .pl-c {
+            color: #969896;
+        }
+
+        .markdown-body .pl-c1,
+        .markdown-body .pl-s .pl-v {
+            color: #0086b3;
+        }
+
+        .markdown-body .pl-e,
+        .markdown-body .pl-en {
+            color: #795da3;
+        }
+
+        .markdown-body .pl-smi,
+        .markdown-body .pl-s .pl-s1 {
+            color: #333;
+        }
+
+        .markdown-body .pl-ent {
+            color: #63a35c;
+        }
+
+        .markdown-body .pl-k {
+            color: #a71d5d;
+        }
+
+        .markdown-body .pl-s,
+        .markdown-body .pl-pds,
+        .markdown-body .pl-s .pl-pse .pl-s1,
+        .markdown-body .pl-sr,
+        .markdown-body .pl-sr .pl-cce,
+        .markdown-body .pl-sr .pl-sre,
+        .markdown-body .pl-sr .pl-sra {
+            color: #183691;
+        }
+
+        .markdown-body .pl-v {
+            color: #ed6a43;
+        }
+
+        .markdown-body .pl-id {
+            color: #b52a1d;
+        }
+
+        .markdown-body .pl-ii {
+            color: #f8f8f8;
+            background-color: #b52a1d;
+        }
+
+        .markdown-body .pl-sr .pl-cce {
+            font-weight: bold;
+            color: #63a35c;
+        }
+
+        .markdown-body .pl-ml {
+            color: #693a17;
+        }
+
+        .markdown-body .pl-mh,
+        .markdown-body .pl-mh .pl-en,
+        .markdown-body .pl-ms {
+            font-weight: bold;
+            color: #1d3e81;
+        }
+
+        .markdown-body .pl-mq {
+            color: #008080;
+        }
+
+        .markdown-body .pl-mi {
+            font-style: italic;
+            color: #333;
+        }
+
+        .markdown-body .pl-mb {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .markdown-body .pl-md {
+            color: #bd2c00;
+            background-color: #ffecec;
+        }
+
+        .markdown-body .pl-mi1 {
+            color: #55a532;
+            background-color: #eaffea;
+        }
+
+        .markdown-body .pl-mdr {
+            font-weight: bold;
+            color: #795da3;
+        }
+
+        .markdown-body .pl-mo {
+            color: #1d3e81;
+        }
+
+        .markdown-body .octicon {
+            display: inline-block;
+            vertical-align: text-top;
+            fill: currentColor;
+        }
+
+        .markdown-body a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects;
+        }
+
+        .markdown-body a:active,
+        .markdown-body a:hover {
+            outline-width: 0;
+        }
+
+        .markdown-body strong {
+            font-weight: inherit;
+        }
+
+        .markdown-body strong {
+            font-weight: bolder;
+        }
+
+        .markdown-body h1 {
+            font-size: 2em;
+            margin: 0.67em 0;
+        }
+
+        .markdown-body img {
+            border-style: none;
+        }
+
+        .markdown-body svg:not(:root) {
+            overflow: hidden;
+        }
+
+        .markdown-body code,
+        .markdown-body kbd,
+        .markdown-body pre {
+            font-family: monospace, monospace;
+            font-size: 1em;
+        }
+
+        .markdown-body hr {
+            box-sizing: content-box;
+            height: 0;
+            overflow: visible;
+        }
+
+        .markdown-body input {
+            font: inherit;
+            margin: 0;
+        }
+
+        .markdown-body input {
+            overflow: visible;
+        }
+
+        .markdown-body button:-moz-focusring,
+        .markdown-body [type="button"]:-moz-focusring,
+        .markdown-body [type="reset"]:-moz-focusring,
+        .markdown-body [type="submit"]:-moz-focusring {
+            outline: 1px dotted ButtonText;
+        }
+
+        .markdown-body [type="checkbox"] {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .markdown-body * {
+            box-sizing: border-box;
+        }
+
+        .markdown-body input {
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .markdown-body a {
+            color: #4078c0;
+            text-decoration: none;
+        }
+
+        .markdown-body a:hover,
+        .markdown-body a:active {
+            text-decoration: underline;
+        }
+
+        .markdown-body strong {
+            font-weight: 600;
+        }
+
+        .markdown-body hr {
+            height: 0;
+            margin: 15px 0;
+            overflow: hidden;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .markdown-body hr::before {
+            display: table;
+            content: "";
+        }
+
+        .markdown-body hr::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .markdown-body table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        .markdown-body td,
+        .markdown-body th {
+            padding: 0;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body h1 {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .markdown-body h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .markdown-body h3 {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .markdown-body h4 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .markdown-body h5 {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .markdown-body h6 {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /*.markdown-body p {*/
+        /*margin-top: 0;*/
+        /*margin-bottom: 10px;*/
+        /*}*/
+
+        .markdown-body blockquote {
+            margin: 0;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body ol ol,
+        .markdown-body ul ol {
+            list-style-type: lower-roman;
+        }
+
+        .markdown-body ul ul ol,
+        .markdown-body ul ol ol,
+        .markdown-body ol ul ol,
+        .markdown-body ol ol ol {
+            list-style-type: lower-alpha;
+        }
+
+        .markdown-body dd {
+            margin-left: 0;
+        }
+
+        .markdown-body code {
+            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            font-size: 12px;
+        }
+
+        .markdown-body pre {
+            margin-top: 0;
+            margin-bottom: 0;
+            font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+        }
+
+        .markdown-body .octicon {
+            vertical-align: text-bottom;
+        }
+
+        .markdown-body input {
+            -webkit-font-feature-settings: "liga" 0;
+            font-feature-settings: "liga" 0;
+        }
+
+        .markdown-body .form-select::-ms-expand {
+            opacity: 0;
+        }
+
+        .markdown-body::before {
+            display: table;
+            content: "";
+        }
+
+        .markdown-body::after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+
+        .markdown-body>*:first-child {
+            margin-top: 0 !important;
+        }
+
+        .markdown-body>*:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .markdown-body a:not([href]) {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .markdown-body .anchor {
+            float: left;
+            padding-right: 4px;
+            margin-left: -20px;
+            line-height: 1;
+        }
+
+        .markdown-body .anchor:focus {
+            outline: none;
+        }
+
+        .markdown-body p {
+            margin: 0;
+        }
+
+        .markdown-body p:empty::before {
+            content: "\00A0";
+        }
+
+        .markdown-body blockquote,
+        .markdown-body ul,
+        .markdown-body ol,
+        .markdown-body dl,
+        .markdown-body table,
+        .markdown-body pre {
+            margin-top: 0;
+            margin-bottom: 24px;
+        }
+
+        .markdown-body hr {
+            height: 0.25em;
+            padding: 0;
+            margin: 24px 0;
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 0;
+        }
+
+        .markdown-body blockquote {
+            padding: 16px;
+            border-left: 0.25em solid rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.03);
+        }
+
+        .markdown-body blockquote> :first-child {
+            margin-top: 0;
+        }
+
+        .markdown-body blockquote> :last-child {
+            margin-bottom: 0;
+        }
+
+        .markdown-body kbd {
+            display: inline-block;
+            padding: 3px 5px;
+            font-size: 11px;
+            line-height: 10px;
+            color: #555;
+            vertical-align: middle;
+            background-color: #fcfcfc;
+            border: solid 1px #ccc;
+            border-bottom-color: #bbb;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #bbb;
+        }
+
+        .markdown-body h1,
+        .markdown-body h2,
+        .markdown-body h3,
+        .markdown-body h4,
+        .markdown-body h5,
+        .markdown-body h6 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .markdown-body h1 .octicon-link,
+        .markdown-body h2 .octicon-link,
+        .markdown-body h3 .octicon-link,
+        .markdown-body h4 .octicon-link,
+        .markdown-body h5 .octicon-link,
+        .markdown-body h6 .octicon-link {
+            color: #000;
+            vertical-align: middle;
+            visibility: hidden;
+        }
+
+        .markdown-body h1:hover .anchor,
+        .markdown-body h2:hover .anchor,
+        .markdown-body h3:hover .anchor,
+        .markdown-body h4:hover .anchor,
+        .markdown-body h5:hover .anchor,
+        .markdown-body h6:hover .anchor {
+            text-decoration: none;
+        }
+
+        .markdown-body h1:hover .anchor .octicon-link,
+        .markdown-body h2:hover .anchor .octicon-link,
+        .markdown-body h3:hover .anchor .octicon-link,
+        .markdown-body h4:hover .anchor .octicon-link,
+        .markdown-body h5:hover .anchor .octicon-link,
+        .markdown-body h6:hover .anchor .octicon-link {
+            visibility: visible;
+        }
+
+        .markdown-body h1 {
+            padding-bottom: 0.3em;
+            font-size: 2em;
+            /*border-bottom: 1px solid #eee;*/
+            /*page-break-before: right;*/
+        }
+
+        .markdown-body h2 {
+            padding-bottom: 0.3em;
+            font-size: 1.5em;
+            /*border-bottom: 1px solid #eee;*/
+            /*page-break-before: always;*/
+        }
+
+        .markdown-body h3 {
+            font-size: 1.25em;
+            /*page-break-before: always;*/
+        }
+
+        .markdown-body h4 {
+            font-size: 1em;
+        }
+
+        .markdown-body h5 {
+            font-size: 0.875em;
+        }
+
+        .markdown-body h6 {
+            font-size: 0.85em;
+            color: #777;
+        }
+
+        .markdown-body ul,
+        .markdown-body ol {
+            padding-left: 2em;
+        }
+
+        .markdown-body ul ul,
+        .markdown-body ul ol,
+        .markdown-body ol ol,
+        .markdown-body ol ul {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .markdown-body dl {
+            padding: 0;
+        }
+
+        .markdown-body dl dt {
+            padding: 0;
+            margin-top: 16px;
+            font-size: 1em;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .markdown-body dl dd {
+            padding: 0 16px;
+            margin-bottom: 16px;
+        }
+
+        .markdown-body table {
+            display: block;
+            width: 100%;
+            overflow: auto;
+            /*word-break: normal;*/
+            word-break: keep-all;
+        }
+
+        .markdown-body table th {
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.04);
+        }
+
+        .markdown-body table th,
+        .markdown-body table td {
+            padding: 6px 13px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .markdown-body table tr {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .markdown-body img {
+            max-width: 100%;
+            box-sizing: content-box;
+            background-color: #fff;
+        }
+
+        .markdown-body code {
+            padding: 0;
+            padding-top: 0.2em;
+            padding-bottom: 0.2em;
+            margin: 0;
+            font-size: 85%;
+            background-color: rgba(0, 0, 0, 0.04);
+            border-radius: 3px;
+        }
+
+        .markdown-body code::before,
+        .markdown-body code::after {
+            letter-spacing: -0.2em;
+            content: "\00a0";
+        }
+
+        .markdown-body pre {
+            word-wrap: normal;
+        }
+
+        .markdown-body pre>code {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            word-break: normal;
+            white-space: pre-wrap;
+            background: transparent;
+            border: 0;
+        }
+
+        .markdown-body .highlight {
+            margin-bottom: 16px;
+        }
+
+        .markdown-body .highlight pre {
+            margin-bottom: 0;
+            word-break: normal;
+        }
+
+        .markdown-body .highlight pre,
+        .markdown-body pre {
+            padding: 16px;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 3px;
+        }
+
+        .markdown-body pre code {
+            display: inline;
+            /*max-width: auto;*/
+            padding: 0;
+            margin: 0;
+            overflow: visible;
+            line-height: inherit;
+            word-wrap: normal;
+            background-color: transparent;
+            border: 0;
+        }
+
+        .markdown-body pre code::before,
+        .markdown-body pre code::after {
+            content: normal;
+        }
+
+        .markdown-body .pl-0 {
+            padding-left: 0 !important;
+        }
+
+        .markdown-body .pl-1 {
+            padding-left: 3px !important;
+        }
+
+        .markdown-body .pl-2 {
+            padding-left: 6px !important;
+        }
+
+        .markdown-body .pl-3 {
+            padding-left: 12px !important;
+        }
+
+        .markdown-body .pl-4 {
+            padding-left: 24px !important;
+        }
+
+        .markdown-body .pl-5 {
+            padding-left: 36px !important;
+        }
+
+        .markdown-body .pl-6 {
+            padding-left: 48px !important;
+        }
+
+        .markdown-body .full-commit .btn-outline:not(:disabled):hover {
+            color: #4078c0;
+            border: 1px solid #4078c0;
+        }
+
+        .markdown-body kbd {
+            display: inline-block;
+            padding: 3px 5px;
+            font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+            line-height: 10px;
+            color: #555;
+            vertical-align: middle;
+            background-color: #fcfcfc;
+            border: solid 1px #ccc;
+            border-bottom-color: #bbb;
+            border-radius: 3px;
+            box-shadow: inset 0 -1px 0 #bbb;
+        }
+
+        .markdown-body :checked+.radio-label {
+            position: relative;
+            z-index: 1;
+            border-color: #4078c0;
+        }
+
+        .markdown-body .task-list-item {
+            list-style-type: none;
+        }
+
+        .markdown-body .task-list-item+.task-list-item {
+            margin-top: 3px;
+        }
+
+        .markdown-body .task-list-item input {
+            margin: 0 0.2em 0.25em -1.6em;
+            vertical-align: middle;
+        }
+
+        .markdown-body figure {
+            margin: 1.2em 0;
+        }
+
+        .hljs-keyword,
+        .hljs-selector-tag {
+            color: #d73a49;
+        }
+
+        .hljs-string,
+        .hljs-regexp {
+            color: #032f62;
+        }
+
+        .hljs-comment,
+        .hljs-doctag {
+            color: #6a737d;
+            font-style: italic;
+        }
+
+        .hljs-title.hljs-function {
+            color: #6f42c1;
+        }
+
+        .hljs-title.hljs-class,
+        .hljs-title {
+            color: #6f42c1;
+        }
+
+        .hljs-number {
+            color: #005cc5;
+        }
+
+        .hljs-type,
+        .hljs-built_in {
+            color: #e36209;
+        }
+
+        .hljs-literal {
+            color: #005cc5;
+        }
+
+        .hljs-attr,
+        .hljs-attribute {
+            color: #005cc5;
+        }
+
+        .hljs-selector-class,
+        .hljs-selector-id {
+            color: #22863a;
+        }
+
+        .hljs-addition {
+            color: #22863a;
+            background-color: #22863a1a;
+        }
+
+        .hljs-deletion {
+            color: #b31d28;
+            background-color: #b31d281a;
+        }
+
+        .hljs-variable,
+        .hljs-template-variable {
+            color: #e36209;
+        }
+
+        .hljs-meta {
+            color: #6a737d;
+        }
+
+        .hljs-tag {
+            color: #586069;
+        }
+
+        .hljs-name {
+            color: #22863a;
+        }
+
+        .hljs-symbol,
+        .hljs-bullet {
+            color: #e36209;
+        }
+
+        .hljs-section {
+            font-weight: bold;
+        }
+
+        .hljs-strong {
+            font-weight: bold;
+        }
+
+        .hljs-emphasis {
+            font-style: italic;
+        }
+
+        .wonderpen-toc {
+            width: 240px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background: rgb(219, 228, 236);
+            border-right: 1px solid rgba(0, 0, 0, 0.12);
+            box-sizing: border-box;
+        }
+
+        .wonderpen-toc-body {
+            height: 100%;
+            overflow: auto;
+        }
+
+        .wonderpen-toc ul {
+            margin: 30px 20px;
+            padding: 0;
+        }
+
+        .wonderpen-toc li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 1.2em;
+        }
+
+        .wonderpen-toc li {
+            margin-bottom: 0.8em;
+        }
+
+        .wonderpen-toc .toc-selected a {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .wonderpen-content {
+            margin-left: var(--wp-toc-width, 240px);
+        }
+
+        .wonderpen-toc-toggler {
+            position: absolute;
+            z-index: 1;
+            top: 30px;
+            right: 20px;
+            display: block;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #999;
+            background: #fff url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDk2IDk2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjx0aXRsZS8+PGc+PHBhdGggZD0iTTE4LDI0SDc4YTYsNiwwLDAsMCwwLTEySDE4YTYsNiwwLDAsMCwwLDEyWiIvPjxwYXRoIGQ9Ik03OCw0MkgxOGE2LDYsMCwwLDAsMCwxMkg3OGE2LDYsMCwwLDAsMC0xMloiLz48cGF0aCBkPSJNNzgsNzJIMThhNiw2LDAsMCwwLDAsMTJINzhhNiw2LDAsMCwwLDAtMTJaIi8+PC9nPjwvc3ZnPg==) no-repeat 50% 50%;
+            background-size: 18px 18px;
+            color: #000;
+            opacity: 0.3;
+            transition: 0.3s;
+        }
+
+        .wonderpen-toc-toggler:hover {
+            opacity: 0.9;
+        }
+
+        .wonderpen-toc-hidden .wonderpen-toc {
+            left: 0;
+            transform: translateX(-100%);
+        }
+
+        .wonderpen-toc-hidden .wonderpen-content {
+            margin-left: 0;
+        }
+
+        .wonderpen-toc-hidden .wonderpen-toc-toggler {
+            right: -34px;
+        }
+
+        .wonderpen-toc .resize-handle {
+            width: 3px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -2px;
+            cursor: col-resize;
+        }
+
+        .wonderpen-toc .resize-handle:hover {
+            background: rgba(128, 128, 128, 0.5);
+        }
+
+        .wonderpen-toc .toc-level-1 {
+            padding-left: 1em;
+        }
+
+        .wonderpen-toc .toc-level-2 {
+            padding-left: 2em;
+        }
+
+        .wonderpen-toc .toc-level-3 {
+            padding-left: 3em;
+        }
+
+        .wonderpen-toc .toc-level-4 {
+            padding-left: 4em;
+        }
+
+        .wonderpen-toc .toc-level-5 {
+            padding-left: 5em;
+        }
+
+        .wonderpen-toc .toc-level-6 {
+            padding-left: 6em;
+        }
+
+        .wonderpen-toc .toc-level-7 {
+            padding-left: 7em;
+        }
+
+        .wonderpen-toc .toc-level-8 {
+            padding-left: 8em;
+        }
+
+        .wonderpen-toc .toc-level-9 {
+            padding-left: 9em;
+        }
+
+        .wonderpen-toc .toc-level-10 {
+            padding-left: 10em;
+        }
+
+        .wonderpen-pagination {
+            margin: 40px 0;
+            font-size: 12px;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .wonderpen-previous-page,
+        .wonderpen-next-page {
+            max-width: 50%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1.5em;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+        }
+
+        .wonderpen-pagination span {
+            flex-shrink: 0;
+            color: #999;
+            padding-right: 1em;
+        }
+
+
+        .wonderpen-content {
+            padding: 30px 40px;
+        }
+
+        .markdown-body {
+            font-family: "Maple Mono NF CN";
+            font-size: 16px;
+            color: auto;
+            line-height: 1.7em;
+            text-align: left;
+        }
+    </style>
+    <style data-role="custom-css"></style>
+</head>
+
+<body class="">
+    <div class="wonderpen-page has-toc">
+        <div class="wonderpen-toc"><button class="wonderpen-toc-toggler" id="wp-toc-toggler"></button>
+            <div class="resize-handle"></div>
+            <div class="wonderpen-toc-body">
+                <ul>
+                    <li>
+                        <div class="toc-title toc-level-0"><a href="..&#92;index.html">ほどけぬ明日に手を伸ばして</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="开幕之仪.html">开幕之仪</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="雨夜、相遇.html">雨夜、相遇</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="雨夜、第二次相遇.html">雨夜、第二次相遇</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1"><a href="名字是yuki.html">名字是yuki</a></div>
+                    </li>
+                    <li>
+                        <div class="toc-title toc-level-1 toc-selected"><a href="第四类接触.html">第四类接触</a></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            ! function() {
+                var e = document.getElementById("wp-toc-toggler");
+
+                function t() {
+                    return document.querySelector(".wonderpen-content")
+                }
+                var n = document.querySelector(".wonderpen-toc"),
+                    o = n ? n.querySelector(".resize-handle") : null,
+                    c = "wonderpen_toc_width_px",
+                    r = "wonderpen_toc_scrollTop";
+
+                function d() {
+                    return n && n.querySelector(".wonderpen-toc-body") || n
+                }
+
+                function s(e) {
+                    if (n) {
+                        e = Math.max(160, Math.min(800, e)), n.style.width = e + "px";
+                        try {
+                            document.documentElement.style.setProperty("--wp-toc-width", e + "px")
+                        } catch (e) {}
+                        var o = t();
+                        return o && !document.body.classList.contains("wonderpen-toc-hidden") && (o.style.marginLeft = e + "px"), e
+                    }
+                }
+                window.addEventListener("beforeunload", function() {
+                    var e = d();
+                    if (e) try {
+                        localStorage.setItem(r, String(e.scrollTop))
+                    } catch (e) {}
+                }), e && (e.onclick = function() {
+                    var e = document.body.classList.toggle("wonderpen-toc-hidden"),
+                        o = t();
+                    if (o)
+                        if (e) {
+                            o.style.marginLeft = "0px";
+                            try {
+                                document.documentElement.style.setProperty("--wp-toc-width", "0px")
+                            } catch (e) {}
+                        } else {
+                            var c = n ? n.offsetWidth : 0;
+                            if (c) {
+                                o.style.marginLeft = c + "px";
+                                try {
+                                    document.documentElement.style.setProperty("--wp-toc-width", c + "px")
+                                } catch (e) {}
+                            }
+                        }
+                });
+                try {
+                    var a = localStorage.getItem(c);
+                    if (a) {
+                        var i = parseInt(a, 10);
+                        isNaN(i) || s(i)
+                    }
+                } catch (e) {}
+                window.addEventListener("load", function() {
+                    try {
+                        var e = localStorage.getItem(c);
+                        if (e) {
+                            var t = parseInt(e, 10);
+                            isNaN(t) || s(t)
+                        } else if (n && !document.body.classList.contains("wonderpen-toc-hidden")) {
+                            var o = n.offsetWidth;
+                            o && s(o)
+                        }
+                    } catch (e) {}
+                });
+                try {
+                    ! function() {
+                        var e = d();
+                        if (e) try {
+                            var t = localStorage.getItem(r);
+                            if (null != t) {
+                                var n = parseInt(t, 10);
+                                isNaN(n) || (e.scrollTop = n), localStorage.removeItem(r)
+                            }
+                        } catch (e) {}
+                    }()
+                } catch (e) {}
+                if (o && n) {
+                    var u = !1;
+                    o.addEventListener("mousedown", v), o.addEventListener("touchstart", v, {
+                        passive: !1
+                    })
+                }
+
+                function l(e) {
+                    if (u) {
+                        e.preventDefault();
+                        var t = n.getBoundingClientRect(),
+                            o = function(e) {
+                                return e.touches && e.touches[0] ? e.touches[0].clientX : e.changedTouches && e.changedTouches[0] ? e.changedTouches[0].clientX : e.clientX
+                            }(e);
+                        s(o - t.left)
+                    }
+                }
+
+                function m() {
+                    if (u) {
+                        u = !1, document.removeEventListener("mousemove", l), document.removeEventListener("mouseup", m), document.removeEventListener("touchmove", l, {
+                            passive: !1
+                        }), document.removeEventListener("touchend", m);
+                        try {
+                            var e = n.offsetWidth;
+                            localStorage.setItem(c, String(e))
+                        } catch (e) {}
+                        document.body.style.userSelect = "", document.body.style.cursor = ""
+                    }
+                }
+
+                function v(e) {
+                    n && (e.preventDefault(), u = !0, document.addEventListener("mousemove", l), document.addEventListener("mouseup", m), document.addEventListener("touchmove", l, {
+                        passive: !1
+                    }), document.addEventListener("touchend", m), document.body.style.userSelect = "none", document.body.style.cursor = "ew-resize")
+                }
+            }()
+        </script>
+        <div id="wonderpen-content" class="wonderpen-content">
+            <div class="markdown-body">
+                <h2>第四类接触</h2>
+                <p>一般来说，像瑞希这样的人，是什么时候开始意识到自己和别人不同的呢？</p>
+                <p></p>
+                <p>她确信自己的记忆没有出现断裂，只知道，哪里不对劲，有什么地方出了差错。</p>
+                <p></p>
+                <p>摆在面前的章节和记忆中有了些许差距，初中的瑞希看的是第三版，现在这个版本是第四版，</p>
+                <p></p>
+                <p>她想要找的是关于serial murder的内容，但面前这个章节有个看起来比较古怪的描述，</p>
+                <p></p>
+                <p>「a patient who developed an adolescent association between seeing blood flow from the fingers of females and his own sexual arousal.」</p>
+                <p></p>
+                <p>这种奇怪的动机，有概率被一些创作者用作素材进行使用，很容易联想到的是某部电影里的剧情，里边的那个罪犯，为了"蜕变"，精心挑选对象，把微胖的女孩关在地下几天，</p>
+                <p></p>
+                <p>幼年的瑞希看着电视屏幕上的画面，高中时的瑞希看着书本上的描述，</p>
+                <p></p>
+                <p>"...最后拿她们的皮肤作为衣服。"，现在的瑞希依旧无法理解，她上下翻找这本书，想要找出能够佐证这种奇妙的模式能够形成的依据，</p>
+                <p></p>
+                <p>得到的是否定的答案，这似乎是一个悲哀的缝合怪产物。</p>
+                <p></p>
+                <p>"...我记得那本小说里有提到那个罪犯也是双相患者，考虑到几十年前的治疗水平，真实世界里可以使用的药物是很有限的。"</p>
+                <p></p>
+                <p>头脑里浮现出一连串现在极少使用到的药物名，</p>
+                <p></p>
+                <p>而且，伴着思考，还闪回了悲伤的记忆，</p>
+                <p></p>
+                <p>回过神来瑞希发现自己的左手屈伸程度就像握着一个空的药瓶，</p>
+                <p></p>
+                <p>...</p>
+                <p></p>
+                <p>有目光围了上来，</p>
+                <p></p>
+                <p>有人正看着她，很近...</p>
+                <p></p>
+                <p>现在的状态是桌面上摊开的是那本红色书，内容完全和课业无关，而当下正是在上课，</p>
+                <p></p>
+                <p>又看了眼黑板的板书...</p>
+                <p></p>
+                <p>（是英语...）</p>
+                <p></p>
+                <p>瑞希刚刚翻找时最后翻到的章节是Mass Murder，第一个案例就是关于校园枪击的事件，严重的犯罪行为，面前这个年轻的女老师不会想知道的，而且还戴着和那个人差不多的眼镜...</p>
+                <p></p>
+                <p>所以，当她用左手合上书，打算拿出真正的课本时，</p>
+                <p></p>
+                <p>对方已经和其他人一样离开这里，</p>
+                <p></p>
+                <p>没说一句话，</p>
+                <p></p>
+                <p>刚刚存在的目光也慢慢消散，</p>
+                <p></p>
+                <p>瑞希只好再次翻开书，翻到上次翻阅到的那部分，</p>
+                <p></p>
+                <p>"说来，幸好不是那种电车里的人群密度..."，</p>
+                <p></p>
+                <p>她的喃喃自语，不知道是说给谁听的，就像幼时的自己看着屏幕上的画面，知道那是电影，是虚构的，但哪里不对，</p>
+                <p></p>
+                <p>"这样做，真的是在'蜕变'吗？"</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>早上真冬在看到新消息的气泡时还愣了一下，</p>
+                <p></p>
+                <p>后面终于想起是那个粉色头发的女孩时，已经是早上第二节课，</p>
+                <p></p>
+                <p>（这个软件她不常用吗？头像还是默认的灰白人头...）</p>
+                <p></p>
+                <p>她的疑问也很多，因为记忆里的自己很早就休息，但大半夜被饿醒，只好去冰箱里找吃的，还因此撞见起夜的母亲然后获得了一番说教，</p>
+                <p></p>
+                <p>"是昨天什么时候认识她的呢？"</p>
+                <p></p>
+                <p>上课铃响，打断了真冬的回忆，</p>
+                <p></p>
+                <p>屏幕上，对方的消息气泡还没有确认已读...</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>看了一下午书，瑞希脑子依旧很乱，和中午扔垃圾的时候一样，</p>
+                <p></p>
+                <p>（夹在那些纸张里的有シロ发给我看过的药物资料...）</p>
+                <p></p>
+                <p>仍然没法把这个疑问从思绪中冲走，</p>
+                <p></p>
+                <p>今天她不打算晚走，不知为何，有点害怕碰到那个女孩，</p>
+                <p></p>
+                <p>傍晚的风比起中午时小了很多，站在楼下，看着被树梢和边缘的各种建筑物遮蔽的天空，</p>
+                <p></p>
+                <p>瑞希还是更喜欢天台那样的开阔场地。</p>
+                <p></p>
+                <p>落日余晖下，地影之外的天空还泛着些许紫色，明天可能会有云，她心想着，因为高空还有水汽，</p>
+                <p></p>
+                <p>下意识地拿出手机，屏幕里，几个社交软件的图标上，没有新的未读气泡，看完天气之后，瑞希还是打开了那个不常用的绿色软件，</p>
+                <p></p>
+                <p>yuki没有在线，早上之后也没再发消息给瑞希。</p>
+                <p></p>
+                <p>明天确实是多云，不过降水概率很低，不用带伞。</p>
+                <p></p>
+                <p>她把手机放回口袋，打算离开，然后，</p>
+                <p></p>
+                <p>听到了不该听到的声音...</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>真冬直到快要吃午饭的时候还在想那条新消息的内容，以及昨晚发生的事情，</p>
+                <p></p>
+                <p>（今天早上穿鞋的时候，鞋底有些微的潮湿...）</p>
+                <p></p>
+                <p>出门时在门口看到的那把不属于自己家里的雨伞，像是成年男性会用的，想到会不会是爸爸的，但从他那里得到了否定的回答。</p>
+                <p></p>
+                <p>（是谁落下的吗？）</p>
+                <p></p>
+                <p>已经是午餐时间，真冬把拿着手机的手放在书桌下，点亮手机的屏幕，</p>
+                <p></p>
+                <p>"诶..."</p>
+                <p></p>
+                <p>未读气泡消失了。</p>
+                <p></p>
+                <p>（是自己什么时候回复了吗？）</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>教学楼背阴面的走廊里，粉色的身影在急速移动，</p>
+                <p></p>
+                <p>瑞希不会听错，有人在呼救，但不过数秒的持续时间意味那个潜在的受害者要么被控制，要么自身已经失去了呼救的能力，</p>
+                <p></p>
+                <p>跑到走廊的转角处，没有上楼，旁边是校园里最大的垃圾箱，是她中午丢垃圾的地方，离围墙很近，</p>
+                <p></p>
+                <p>地面上躺着一个穿着校服的女生，是本校的学生，周围没有别人，没法寻求帮助。</p>
+                <p></p>
+                <p>瑞希只能一边极力地压抑自己呼吸的起伏，一边拿出手机，拨出了报警电话，平静地讲述完情况后，她拍了周围的照片，然后走上前，确认那个女生的脉搏和呼吸，</p>
+                <p></p>
+                <p>"两个都在...也没有抽搐和别的异常表现，看起来没有明显的外伤。"</p>
+                <p></p>
+                <p>接着拿出外衣口袋里的手机，使用手机的闪光灯照了下女孩的头部，</p>
+                <p></p>
+                <p>"前言撤回...颅脑外伤..."</p>
+                <p></p>
+                <p>女孩右侧耳朵以上的头发有渗血的痕迹，</p>
+                <p></p>
+                <p>确认完这点的瑞希关掉手机的闪光灯，脱下外衣，并把它盖在面前这个女孩身上，她能做就这么多，而刚刚急速奔跑的副作用也开始出现，</p>
+                <p></p>
+                <p>（有点反胃...）</p>
+                <p></p>
+                <p>选择在不远处的墙边坐了下来，身体需要有个倚靠，略微出汗的身体也不想被风吹到，</p>
+                <p></p>
+                <p>不一会，警察到了现场，拉起了警戒线，救护车也到了，在那个女孩被拉走前，瑞希看了眼车里，没有忙乱迹象，警察的例行问话很简单，但瑞希没告诉他们自己拍了现场的照片的事情，</p>
+                <p></p>
+                <p>毕竟都被破坏了...还有，刚刚跑起来觉得累的一个原因是书包里的那本书，hardcover，1.5kg，用力砸向别人的话说不定真的能砸晕人，在意识到这点后，她不想因此横生枝节。</p>
+                <p></p>
+                <p>结果，还是在校门口碰见被挡在校外的那个女孩，瑞希远远地看着她，她和她的弟弟在一起，前阵子的疑问有了答案，她确实有人陪同。</p>
+                <p></p>
+                <p>没再过多停留，瑞希向公交站台的方向走去。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>真冬坐在回家的公交车上，这条线路经过几个大型的商业综合体，人比较多，所以她没能坐在靠窗的位置，</p>
+                <p></p>
+                <p>旁边坐着的是和自己爸爸差不多年纪的男性，他倚靠在窗边，眯着眼睛。</p>
+                <p></p>
+                <p>抱着书包，旁边有人，所以她只能看向地面。</p>
+                <p></p>
+                <p>由于空间的局促，男人的肩膀时不时会车辆的摇晃轻微地触碰到真冬的肩膀，对人疏离的她其实很反感这种触碰，</p>
+                <p></p>
+                <p>内心有一丝无来由的焦躁...</p>
+                <p></p>
+                <p>有警笛声，由远及近，接着，似乎是公交司机轻点了刹车，真冬差点坐不住往前倒...</p>
+                <p></p>
+                <p>一辆救护车正闪烁着蓝红交替的灯光，在车流的缝隙中急速穿行，伴着警笛和不断的喇叭声，</p>
+                <p></p>
+                <p>用脚抵住地面的真冬，转头看向右侧窗户，只能看到救护车远去的背影，它开得很快，警笛声由近及远，不一会就变得微弱，</p>
+                <p></p>
+                <p>公交车继续开行，还有几个站就到“家”了，但刚刚那辆救护车的方向，</p>
+                <p></p>
+                <p>（是开往妈妈医院的……）</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>脱去外套的瑞希，把书包抱在胸前，她举着手机，检索关于通り魔的信息，</p>
+                <p></p>
+                <p>伴着警笛和不断的喇叭声，刚刚停在学校的救护车超过公交，转了个弯，往另外一个方向去，</p>
+                <p></p>
+                <p>她看了眼窗外，已经找不到救护车的影子，不知道它向着哪个医院开去，警笛声也越来越遥远，</p>
+                <p></p>
+                <p>注意力转回手机上，通り魔的信息并不多，如果限定了日期，能搜到的结果就更加稀少。</p>
+                <p></p>
+                <p>（暂时只有昨晚的那个被害者...行为方式是持刀吗？）</p>
+                <p></p>
+                <p>学校里受伤的女生是钝器伤...想到这点，瑞希紧绷的身体放松了些许，只是刚刚把后背靠在椅子上，公交就经过了减速带，椅背硌得生疼。</p>
+                <p></p>
+                <p>她把手机放下，下午找班主任的事情又浮上来，当时对方全程没怎么看她，只是说了补考的时间和科目，最后补了一句，</p>
+                <p></p>
+                <p>"有什么困难可以跟学校说。"</p>
+                <p></p>
+                <p>瑞希当时没有回应。</p>
+                <p></p>
+                <p>思绪又飘到中午扔垃圾时看到的那些纸张，夹在类带来的文献里的，是シロ发给她看过的药物资料。</p>
+                <p></p>
+                <p>（为什么类会有那些东西……）</p>
+                <p></p>
+                <p>这个疑问从中午开始就没能从脑子里冲走。</p>
+                <p></p>
+                <p>手机震动了一下，瑞希低头看去，シロ发来了新的私信，点开软件后发现，自己已经将ta添加为了联系人。</p>
+                <p></p>
+                <p>シロ：「離れた？」</p>
+                <p></p>
+                <p>ta的私信，接续在几天前自己发出的「なんで教えた？」之后，不知道为什么，瑞希突然冒出了想询问ta是谁的想法。</p>
+                <p></p>
+                <p>但她的拇指悬在键盘上方，迟迟没有落下。</p>
+                <p></p>
+                <p>交易了这么多次，她从未问过对方任何私人问题，这是某种默契，也是这种关系能维持下去的前提。</p>
+                <p></p>
+                <p>公交转弯，瑞希的身体随之倾斜，窗外的路灯一盏一盏掠过。</p>
+                <p></p>
+                <p>最后她只是回了个表情：</p>
+                <p></p>
+                <p>「✔」</p>
+                <p></p>
+                <p>不一会，公交到站，瑞希把手机放进书包，抱着书包下了车。</p>
+                <p></p>
+                <hr>
+                <p></p>
+                <p>真冬打开家门时，玄关的灯没有亮</p>
+            </div>
+            <div class="wonderpen-pagination">
+                <div class="wonderpen-previous-page"><span>上一页</span> <a href="名字是yuki.html">名字是yuki</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
